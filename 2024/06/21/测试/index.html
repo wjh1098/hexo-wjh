@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>测试 - 城南花已开的blog</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta name="description" content="行政餐厅模块1.后台管理模块用户管理 权限管理 角色管理（行政人员，主厨，餐厅负责人，服务员） 路由管理（包厢预定，定制菜单，预定信息，满意度调查，复盘，菜品管理） 2.app登录登录对接企微，把企微登录信息存放到用户表 3.首页:rocket:根据不同的权限展示 路由：包厢预定，定制菜单，预定信息，满意度调查，复盘，菜品管理 1.行政人员展示内容： 包厢预定，预定信息，满意度调查，复盘，菜品管理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测试">
+<meta property="og:url" content="http://wx1314.xyz/2024/06/21/%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:site_name" content="城南花已开的blog">
+<meta property="og:description" content="行政餐厅模块1.后台管理模块用户管理 权限管理 角色管理（行政人员，主厨，餐厅负责人，服务员） 路由管理（包厢预定，定制菜单，预定信息，满意度调查，复盘，菜品管理） 2.app登录登录对接企微，把企微登录信息存放到用户表 3.首页:rocket:根据不同的权限展示 路由：包厢预定，定制菜单，预定信息，满意度调查，复盘，菜品管理 1.行政人员展示内容： 包厢预定，预定信息，满意度调查，复盘，菜品管理">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-06-21T02:55:34.000Z">
+<meta property="article:modified_time" content="2024-06-21T02:56:16.958Z">
+<meta property="article:author" content="cnhyk">
+<meta name="twitter:card" content="summary">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1718941668546">
+
+<link rel="stylesheet" href="/css/style.css?v=1718941668546">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1718941668546">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1718941668546"></script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4D4ZJ9G024"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+
+  gtag("config", "G-4D4ZJ9G024");
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<meta name="generator" content="Hexo 7.2.0"></head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(https://t.tutu.to/img/vZMc7)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="cnhyk"><img src="https://t.tutu.to/img/vZpSH" alt="cnhyk"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="cnhyk">
+            <img src="https://t.tutu.to/img/vZpSH" alt="cnhyk" alt="cnhyk">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>2</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://jq.qq.com/?_wv=1027&k=5CfKHun"
+			target="_blank"
+			mdui-tooltip="{content: 'QQ群'}"
+			style="
+				color: rgb(249, 174, 8);
+				background-color: rgba(249, 174, 8, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-QQ"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/20238211"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/nexmoe/"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+
+    
+        
+        
+    
+        
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">最新文章</h3>
+    <div class="nexmoe-widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/06/21/%E6%B5%8B%E8%AF%95/">测试</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/21/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-link">
+		<ul>
+        
+            <li>
+                <a href="https://nexmoe.com/" target="_blank" >
+                    <img src="https://t.tutu.to/img/vZpSH" alt="城南花已开"></img>
+                    <p>城南花已开</p>
+                </a>
+            </li>
+        
+		</ul>
+    </div>
+</div>
+<style>
+.nexmoe-widget-wrap .nexmoe-link ul li a {
+    text-align : center;
+}
+.nexmoe-widget-wrap .nexmoe-link ul li a img {
+    max-width : 100%;
+}
+.nexmoe-widget-wrap .nexmoe-link ul li a p {
+    margin: 10px 0;
+}
+</style>
+
+    
+   
+    <div class="nexmoe-copyright">
+        &copy; 2024 cnhyk
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <br><a target="_blank" href="https://beian.miit.gov.cn/">鄂ICP备2020018486号</a>
+<br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">
+
+    </div>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover"> 
+            <img src="https://t.tutu.to/img/vZMc7" alt="测试" loading="lazy">
+            <h1>测试</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2024年06月21日</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h1 id="行政餐厅"><a href="#行政餐厅" class="headerlink" title="行政餐厅"></a>行政餐厅</h1><h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><h3 id="1-后台管理模块"><a href="#1-后台管理模块" class="headerlink" title="1.后台管理模块"></a>1.后台管理模块</h3><p>用户管理</p>
+<p>权限管理</p>
+<p>角色管理（行政人员，主厨，餐厅负责人，服务员）</p>
+<p>路由管理（包厢预定，定制菜单，预定信息，满意度调查，复盘，菜品管理）</p>
+<h3 id="2-app登录"><a href="#2-app登录" class="headerlink" title="2.app登录"></a>2.app登录</h3><p>登录对接企微，把企微登录信息存放到用户表</p>
+<h3 id="3-首页"><a href="#3-首页" class="headerlink" title="3.首页"></a>3.首页</h3><p>:rocket:根据不同的权限展示</p>
+<p><strong>路由：</strong>包厢预定，定制菜单，预定信息，满意度调查，复盘，菜品管理</p>
+<p>1.<strong>行政人员展示内容：</strong> 包厢预定，预定信息，满意度调查，复盘，菜品管理</p>
+<p>2.<strong>主厨展示内容：</strong> 定制菜单，预定信息，复盘</p>
+<p>3.<strong>餐厅负责人展示内容：</strong>菜品管理，预定信息，复盘</p>
+<p>4.<strong>服务员展示内容：</strong>预定信息，满意度评价，复盘</p>
+<h3 id="4-菜品管理"><a href="#4-菜品管理" class="headerlink" title="4.菜品管理"></a>4.菜品管理</h3><p>菜品管理，添加删除，修改菜品</p>
+<h3 id="5-包厢预定"><a href="#5-包厢预定" class="headerlink" title="5.包厢预定"></a>5.包厢预定</h3><p>预定部门（下拉），接待性质，主招待人，就餐人员，对接人，包厢类型（选择框），预计人数，开餐时间（下拉）</p>
+<p><del>暂定：其中主招待人，对接人要拉取用户表中的行政人员角色的用户</del></p>
+<h3 id="6-定制菜单"><a href="#6-定制菜单" class="headerlink" title="6.定制菜单"></a>6.定制菜单</h3><p>只有主厨能选择定制菜单，选择菜品添加到定制菜单表中</p>
+<p>购物车功能</p>
+<h3 id="7-预定信息"><a href="#7-预定信息" class="headerlink" title="7.预定信息"></a>7.预定信息</h3><p>所有角色都可以查看预定信息，按照时间，今日菜单，明日菜单等展示</p>
+<p><strong>预定信息状态：</strong> 待定制，待开餐，进行中，已结束</p>
+<h4 id="主厨，餐厅负责人，服务员"><a href="#主厨，餐厅负责人，服务员" class="headerlink" title="主厨，餐厅负责人，服务员"></a>主厨，餐厅负责人，服务员</h4><p>待定制：取消，分享，查看</p>
+<p>待开餐：取消，分享，更改</p>
+<p>进行中：加单，查看（加单一次以后变成更改加单）</p>
+<p>已结束：查看</p>
+<h4 id="行政人员"><a href="#行政人员" class="headerlink" title="行政人员"></a>行政人员</h4><p>待定制：取消，查看</p>
+<p>待开餐：取消，分享，更改</p>
+<p>进行中：加单，查看</p>
+<p>已结束：查看</p>
+<h3 id="8-满意度评价"><a href="#8-满意度评价" class="headerlink" title="8.满意度评价"></a>8.满意度评价</h3><p>待定</p>
+<h3 id="9-复盘"><a href="#9-复盘" class="headerlink" title="9.复盘"></a>9.复盘</h3><p>待定</p>
+<h1 id="行政餐厅后台"><a href="#行政餐厅后台" class="headerlink" title="行政餐厅后台"></a>行政餐厅后台</h1><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><ol>
+<li>登录</li>
+<li>修改admin密码</li>
+<li>修改admin信息</li>
+<li>退出</li>
+</ol>
+<h3 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h3><ol>
+<li>新增用户</li>
+<li>修改用户</li>
+<li>删除用户</li>
+<li>授权角色</li>
+<li>搜索</li>
+</ol>
+<h3 id="角色管理"><a href="#角色管理" class="headerlink" title="角色管理"></a>角色管理</h3><ol>
+<li>新增</li>
+<li>修改</li>
+<li>删除</li>
+<li>搜索</li>
+<li>角色权限分配 树状</li>
+</ol>
+
+    
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>cnhyk<br>
+        <strong>本文链接：</strong><a href="http://wx1314.xyz/2024/06/21/%E6%B5%8B%E8%AF%95/" title="http:&#x2F;&#x2F;wx1314.xyz&#x2F;2024&#x2F;06&#x2F;21&#x2F;%E6%B5%8B%E8%AF%95&#x2F;" target="_blank" rel="noopener">http:&#x2F;&#x2F;wx1314.xyz&#x2F;2024&#x2F;06&#x2F;21&#x2F;%E6%B5%8B%E8%AF%95&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1718941668528"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          请在你的配置文件中设置 slotComment
+
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%8C%E6%94%BF%E9%A4%90%E5%8E%85"><span class="toc-number">1.</span> <span class="toc-text">行政餐厅</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9D%97"><span class="toc-number">1.1.</span> <span class="toc-text">模块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E6%A8%A1%E5%9D%97"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.后台管理模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-app%E7%99%BB%E5%BD%95"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.app登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%A6%96%E9%A1%B5"><span class="toc-number">1.1.3.</span> <span class="toc-text">3.首页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%8F%9C%E5%93%81%E7%AE%A1%E7%90%86"><span class="toc-number">1.1.4.</span> <span class="toc-text">4.菜品管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%8C%85%E5%8E%A2%E9%A2%84%E5%AE%9A"><span class="toc-number">1.1.5.</span> <span class="toc-text">5.包厢预定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AE%9A%E5%88%B6%E8%8F%9C%E5%8D%95"><span class="toc-number">1.1.6.</span> <span class="toc-text">6.定制菜单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E9%A2%84%E5%AE%9A%E4%BF%A1%E6%81%AF"><span class="toc-number">1.1.7.</span> <span class="toc-text">7.预定信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BB%E5%8E%A8%EF%BC%8C%E9%A4%90%E5%8E%85%E8%B4%9F%E8%B4%A3%E4%BA%BA%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%91%98"><span class="toc-number">1.1.7.1.</span> <span class="toc-text">主厨，餐厅负责人，服务员</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A1%8C%E6%94%BF%E4%BA%BA%E5%91%98"><span class="toc-number">1.1.7.2.</span> <span class="toc-text">行政人员</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%BB%A1%E6%84%8F%E5%BA%A6%E8%AF%84%E4%BB%B7"><span class="toc-number">1.1.8.</span> <span class="toc-text">8.满意度评价</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E5%A4%8D%E7%9B%98"><span class="toc-number">1.1.9.</span> <span class="toc-text">9.复盘</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%8C%E6%94%BF%E9%A4%90%E5%8E%85%E5%90%8E%E5%8F%B0"><span class="toc-number">2.</span> <span class="toc-text">行政餐厅后台</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95"><span class="toc-number">2.0.1.</span> <span class="toc-text">登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="toc-number">2.0.2.</span> <span class="toc-text">用户管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%92%E8%89%B2%E7%AE%A1%E7%90%86"><span class="toc-number">2.0.3.</span> <span class="toc-text">角色管理</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+</div></body></html>
